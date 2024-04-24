@@ -28,27 +28,33 @@ Open terminal and try execute some kali linux commands
 
 Invoke msfconsole:
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/8ece81bd-8d91-498d-91cc-18096809bf40)
+
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/6d8173b7-464c-4be9-9c3c-075633e02d2b)
+
 Port Scanning:
 Following command is executed for scanning the systems on our local area network with a TCP scan (-sT) looking for open ports between 1 and 1000 (-p1-1000). msf > nmap -sT 192.168.1810/24 -p1-1000
 OUTPUT:
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/ff252e3e-fe1e-4a93-b754-5d4ced4f68b7)
+
 step4: use the db-nmap command to scan and save the results into Metasploit's postgresql attached database. In that way, you can use those results in the exploitation stage later.
 
 scan the targets with the command db_nmap as follows. msf > db_nmap 192.168.181.0/24
 OUTPUT:
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/3ee66371-ccc9-4245-b5ff-5356809e362c)
+
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules. cd /usr/share /metasploit-framework/modules/auxiliary kali > ls -l
 
 OUTPUT:
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/fbb24c97-3807-46e7-b06b-c3b625967215)
+
 Search is a powerful command in Metasploit that you can use to find what you want to locate. msf >search name:Microsoft type:exploit
 
 The info command provides information regarding a module or platform,
 
 OUTPUT
 ![image](https://github.com/1808charitha/Metasploit-for-reconnaissance/assets/132996838/97a56fd6-c08c-43d3-8816-6a1fcef38c56)
+
 Before beginning, set up the Metasploit database by starting the PostgreSQL server and initialize msfconsole database as follows: systemctl start postgresql msfdb init
 
 MYSQL ENUMERATION
